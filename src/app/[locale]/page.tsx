@@ -397,11 +397,33 @@ export default async function Home({ params }: HomeProps) {
         <VerticalLine side='left' origin='bottom' />
         <VerticalLine side='right' origin='bottom' />
 
-        <div className='flex flex-col items-center justify-center gap-2 py-64 text-[#DCD7CD] sm:gap-4 sm:py-48'>
+        <div className='flex flex-col items-center justify-center gap-1 overflow-hidden py-64 text-[#DCD7CD] sm:gap-2 sm:py-48'>
           <p className='text-base sm:text-2xl'>{t('footer.letWork')}</p>
-          <p className='bg-gradient-to-r from-[#DCD7CD] to-[#E7BE6C] bg-clip-text text-2.5xl text-transparent sm:text-5.5xl'>
-            erick.prussak@gmail.com
-          </p>
+          <div className='footer-container group relative px-8 py-2'>
+            <span
+              aria-hidden
+              className='absolute left-1/2 top-0 -z-10 block h-px w-screen -translate-x-1/2 -translate-y-96 bg-white opacity-5 transition-transform duration-300 group-hover:-translate-y-0'
+            />
+
+            <span
+              aria-hidden
+              className='absolute bottom-0 left-1/2 -z-10 block h-px w-screen -translate-x-1/2 translate-y-96 bg-white opacity-5 transition-transform duration-300 group-hover:translate-y-0'
+            />
+
+            <span
+              aria-hidden
+              className='absolute left-0 top-0 -z-10 block h-screen w-px -translate-x-[80vw] -translate-y-1/2 bg-white opacity-5 transition-transform duration-300 group-hover:translate-x-0'
+            />
+
+            <span
+              aria-hidden
+              className='absolute right-0 top-0 -z-10 block h-screen w-px -translate-y-1/2 translate-x-[80vw] bg-white opacity-5 transition-transform duration-300 group-hover:translate-x-0'
+            />
+
+            <p className='bg-gradient-to-r from-[#DCD7CD] to-[#E7BE6C] bg-clip-text text-2.5xl text-transparent hover:cursor-pointer sm:text-5.5xl'>
+              erick.prussak@gmail.com
+            </p>
+          </div>
         </div>
 
         <div className='group relative flex items-center justify-center gap-1.5 p-8 text-xs lowercase leading-none text-[#57544E]'>
